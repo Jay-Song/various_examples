@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
   while (std::getline(file, buffer))
   {
     ss.str(buffer);
-    while (ss >> temp) //ss.eof() is also possible
+    while (ss >> temp) //!ss.eof() is also possible
       std::cout << temp << "  ";
 
     std::cout << std::endl;
@@ -34,3 +34,29 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+
+
+//int main(void)
+//{
+//  std::ifstream file;
+//  file.open("test.txt");
+//  std::string str;
+//
+//  while (!file.eof())
+//  {
+//    std::getline(file, str);
+//    std::stringstream ss(str);
+//    int a = 0;
+//    while (ss >> a)
+//    {
+//      std::cout << a << " ";
+//    }
+//
+//    std::cout << ss.eof() << " ";
+//    std::cout << std::endl;
+//  }
+//
+//  file.close();
+//
+//  return 0;
+//}
